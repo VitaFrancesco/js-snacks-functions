@@ -24,8 +24,15 @@ function wordWithInitial (array, letter) {
     return returnArray;
 }
 
+function filterbyletter (array, letter = '') {
+    return array.filter(
+        (element) => element.charAt(0).toLowerCase() === letter.toLowerCase()
+    )
+}
+
 // Invoca la funzione qui e stampa il risultato in console
 console.log(wordWithInitial(names, 'l'));
+console.log(filterbyletter(names, 'a'));
 
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
